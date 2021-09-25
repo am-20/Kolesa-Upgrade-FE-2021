@@ -4,10 +4,53 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Vite App</title>
   </head>
   <body>
     <div id="app"></div>
+    <!-- Button that opens modal -->
+    <button type="button" class="open-modal"
+    data-toggle="modal" data-target="#modal"
+    style="width: 134px; height: 34px;">
+        Open modal
+    </button>
+    <!-- Backdrop -->
+    <div class="modal-backdrop"></div>
+    <!-- Modal -->
+    <div class="modal"
+    style="max-width: 1039px; height: fit-content;">
+        <div class="modal-content">
+            <img src="./src/assets/Icon shape.svg" alt="close sign" class="close">
+            <div class="modal-body">
+                <div class="images">
+                    <img src="./src/assets/image 7.png" alt="Самая модная футболка">
+                    <div class="images-previews">
+                        <img src="./src/assets/🌆 Image.png" alt="Третья модная фотка">
+                        <img src="./src/assets/🌆 Image-1.png" alt="Первая модная фотка">
+                        <img src="./src/assets/🌆 Image-2.png" alt="Вторая модная фотка">
+                    </div>
+                </div>
+                <div class="description">
+                    <p class="title">Футболка "Эволюционируй или сдохни"</p>
+                    <p class="price">100 баллов</p>
+                    <button type="button" class="buy"
+                    style="width: 134px; height: 36px;">
+                    Заказать
+                    </button>
+                </div>
+                <div class="balance">
+                    <div class="balance-description">
+                        <p class="balance-text">Твой баланс:</p>
+                        <p class="balance-amount">3 945 баллов</p>
+                    </div>
+                    <span class="balance-icon">🛍</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

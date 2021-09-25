@@ -6,3 +6,140 @@
     color: #2c3e50;
     margin-top: 60px;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #1c1819;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.open-modal {
+    margin-top: 30px;
+    background-color: #2a81dd;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 0;
+}
+
+.open-modal:focus {
+    outline: none;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 56px;
+    position: absolute;
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 30.67px;
+    right: 30.67px;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 330px 392px auto;
+    gap: 24px;
+}
+
+.description {
+    margin-top: 8px;
+}
+
+.title {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 8px 0;
+}
+
+.buy {
+    height: 24px;
+    border-radius: 8px;
+    background-color: #2a81dd;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+
+.balance {
+    width: 196px;
+    height: 68px;
+    background-color: #f0fafd;
+    border-radius: 16px;
+    padding: 8px 16px;
+    display: grid;
+    grid-template-columns: 120px 40px;
+    gap: 12px;
+    align-items: center;
+    margin-top: 48px;
+    margin-left: -40px;
+}
+
+.balance-text {
+    color: #888b94;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.balance-icon {
+    width: 40px;
+    height: 24px;
+    font-size: 40px;
+    line-height: 24px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+
+.images-previews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.images-previews img {
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+img:nth-child(2) {
+    margin: 0 8px;
+    border: #2a81dd 1px solid;
+}

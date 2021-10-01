@@ -13,20 +13,25 @@
 </head>
 
 <body>
-    <!-- header -->
+    <div class="wrapper">
+        <!-- header -->
     <header>
         <div class="logo">
             <img
-                src="./src/assets/Project logo/logo.svg"
+                src="./src/assets/project_logo/logo.svg"
                 alt="Kolesa logo"
             >
         </div>
-        <div class="search">
+        <form class="search">
             <input
                 type="search"
                 placeholder="Поиск"
+                class="search-input"
             >
-            <button type="button">
+            <button
+                type="submit"
+                class="search-btn"
+            >
                 <svg
                     width="24"
                     height="24"
@@ -43,7 +48,7 @@
                     />
                 </svg>
             </button>
-        </div>
+        </form>
         <button
             type="button"
             class="user"
@@ -57,66 +62,136 @@
     </header>
 
     <!-- main block -->
-    <main>
+    <main class="main">
         <!-- navigation - menu -->
-        <nav>
+        <nav class="nav">
             <ul class="menu">
                 <li>
-                    <a href="#">Оргсхема</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Оргсхема
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Kolesa <b>Team</b></a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Kolesa <b>Team</b>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Kolesa Shop</a>
+                    <div class="line"></div>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Kolesa Shop
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Картина компании</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Картина компании
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Новости</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Новости
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Education</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Education
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Guidelines</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Guidelines
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Библиотека</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        Библиотека
+                    </a>
                 </li>
                 <li>
-                    <a href="#">FAQ</a>
+                    <a
+                        href="#"
+                        class="menu-link"
+                    >
+                        FAQ
+                    </a>
                 </li>
             </ul>
         </nav>
 
         <!-- banner, hot keys, tabs, items -->
-        <section>
+        <section class="content">
             <!-- banner -->
             <!-- <div class="banner">
                 <img src="/src/assets/banner.png" alt="banner">
             </div> -->
             <!-- hot keys -->
             <div class="hot-keys">
-                <button type="button">
+                <button
+                    type="button"
+                    class="hot-btn"
+                >
                     <span>➕</span>
-                    <h3>Получить баллы</h3>
+                    <p class="hot-keys-text">Получить баллы</p>
                 </button>
-                <button type="button">
+                <button
+                    type="button"
+                    class="hot-btn"
+                >
                     <span>❓</span>
-                    <h3>Как получить баллы</h3>
+                    <p class="hot-keys-text">Как получить баллы</p>
                 </button>
-                <button type="button">
+                <button
+                    type="button"
+                    class="hot-btn"
+                >
                     <span>🎁</span>
-                    <h3>Подарить баллы</h3>
+                    <p class="hot-keys-text">Подарить баллы</p>
                 </button>
             </div>
             <!-- tabs -->
             <div class="tabs">
-                <button type="button">Все товары</button>
-                <button type="button">Одежда</button>
-                <button type="button">Аксессуары</button>
+                <button
+                    type="button"
+                    class="tabs-btn tabs-active"
+                >
+                    Все товары
+                </button>
+                <button
+                    type="button"
+                    class="tabs-btn"
+                >
+                    Одежда
+                </button>
+                <button
+                    type="button"
+                    class="tabs-btn"
+                >
+                    Аксессуары
+                </button>
             </div>
             <!-- items -->
             <div class="items">
@@ -125,14 +200,13 @@
                         <img
                             src="./src/assets/image_4.png"
                             alt="Модная футболка"
-
                                 >
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -152,9 +226,9 @@
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -174,9 +248,9 @@
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -196,9 +270,9 @@
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -218,9 +292,9 @@
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -240,9 +314,9 @@
                         <span>new</span>
                     </div>
                     <div class="card-description">
-                        <h3 class="card-price">220 баллов</h3>
-                        <h1 class="card-title">Футболка "Эволюционируй или сдохни"</h1>
-                        <h6 class="card-size">Размеры S/M/L</h6>
+                        <p class="card-price">220 баллов</p>
+                        <p class="card-title">Футболка "Эволюционируй или сдохни"</p>
+                        <p class="card-size">Размеры S/M/L</p>
                         <button
                             type="button"
                             class="card-btn"
@@ -255,26 +329,26 @@
             </div>
         </section>
     </main>
-
+    </div>
     <footer>
         <div class="socials">
             <p>© Kolesa Group</p>
             <socials-svg>
                 <a href="#">
                     <img
-                        src="/src/assets/Social icons/instagram.svg"
+                        src="/src/assets/social_icons/instagram.svg"
                         alt="instagram icon"
                     >
                 </a>
                 <a href="#">
                     <img
-                        src="/src/assets/Social icons/youtube.svg"
+                        src="/src/assets/social_icons/youtube.svg"
                         alt="youtube icon"
                     >
                 </a>
                 <a href="#">
                     <img
-                        src="/src/assets/Social icons/vk.svg"
+                        src="/src/assets/social_icons/vk.svg"
                         alt="vk icon"
                     >
                 </a>
@@ -285,7 +359,7 @@
                 Есть идеи что улучшить? <br>
                 Не знаешь, с кем решить проблему?
             </p>
-            <button>Написать</button>
+            <button class="review-btn">Написать</button>
         </div>
     </footer>
 </body>

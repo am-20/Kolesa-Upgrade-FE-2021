@@ -27,7 +27,7 @@ body {
 .open-modal {
     width: 134px;
     height: 34px;
-    margin-top: 30px;
+    margin: 30px 0;
     background-color: #2a81dd;
     color: #fff;
     border-radius: 8px;
@@ -205,8 +205,8 @@ form {
     margin: 0 8px;
 }
 
-.colors_radio_btn input[type=radio],
-.sizes_radio_btn input[type=radio] {
+.colors_radio_btn input[type='radio'],
+.sizes_radio_btn input[type='radio'] {
     display: none;
 }
 

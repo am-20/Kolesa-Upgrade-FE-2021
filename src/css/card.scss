@@ -1,0 +1,101 @@
+@import '../css/vars.scss';
+@import '../css/mixins.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 474px;
+    border-radius: $radius;
+
+    &:hover {
+        box-shadow: 0 2px 10px $shadow-color;
+        height: 534px;
+        margin-bottom: -60px;
+        z-index: 1;
+    }
+
+    &:hover &__price {
+        color: $red;
+    }
+
+    &:hover button {
+        display: block;
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__photo {
+        width: 330px;
+        height: 330px;
+        display: block;
+    }
+
+    &__beige {
+        background: #64bd38;
+        color: $white;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 4px;
+        padding: 0 4px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    &__description {
+        padding: 16px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: $blue;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        margin-bottom: 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__size {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #888b94;
+    }
+
+    &__btn {
+        background: $blue;
+        box-shadow: 0 2px 4px $shadow-color;
+        border-radius: $radius;
+        color: $white;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 44px;
+        margin: 16px 0;
+        border: 0;
+    }
+
+    [hidden] {
+        display: none;
+    }
+}

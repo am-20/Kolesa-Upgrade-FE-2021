@@ -39,12 +39,12 @@
         &:hover {
             border: 1px solid rgba(107, 107, 107, 0.5);
         }
-    }
 
-    &__active {
-        background: #d6ecfb;
-        color: $black;
-        border: 1px solid #d6ecfb;
-        outline: 0;
+        &--active {
+            background: #d6ecfb;
+            color: $black;
+            border: 1px solid #d6ecfb;
+            outline: 0;
+        }
     }
 }

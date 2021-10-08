@@ -1,0 +1,50 @@
+@import '../css/vars.scss';
+@import '../css/mixins.scss';
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    border: 1px solid $white;
+
+    &__btn {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $blue;
+        background: $white;
+        padding: 6px 18px;
+        border: 1px solid $shadow-color;
+        border-radius: $radius;
+        cursor: pointer;
+
+        &:nth-child(2) {
+            margin: 0 8px;
+        }
+
+        &:active {
+            background: #d6ecfb;
+            color: $black;
+            border: 0;
+            outline: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            border: 1px solid rgba(107, 107, 107, 0.5);
+        }
+
+        &--active {
+            background: #d6ecfb;
+            color: $black;
+            border: 1px solid #d6ecfb;
+            outline: 0;
+        }
+    }
+}

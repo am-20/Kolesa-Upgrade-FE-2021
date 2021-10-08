@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/modal.css">
+    <title>Modal</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- Button that opens modal -->
+    <button
+        type="button"
+        class="open-modal"
+    >
+        Open modal
+    </button>
+    <!-- Backdrop -->
+    <div class="modal-backdrop"></div>
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <button type="button">
+                <img
+                    src="./src/assets/Close/close_big.svg"
+                    alt="close sign"
+                    class="close"
+                >
+            </button>
+            <div class="modal-body">
+                <div class="images">
+                    <img
+                        src="./src/assets/image_7.png"
+                        alt="Самая модная футболка"
+                    >
+                    <div class="images-previews">
+                        <img
+                            src="./src/assets/image.png"
+                            alt="Третья модная фотка"
+                        >
+                        <img
+                            src="./src/assets/image_1.png"
+                            alt="Первая модная фотка"
+                        >
+                        <img
+                            src="./src/assets/image_2.png"
+                            alt="Вторая модная фотка"
+                        >
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="description-head">
+                        <h1 class="title">Футболка "Эволюционируй или сдохни"</h1>
+                        <p class="price">100 баллов</p>
+                        <button
+                            type="button"
+                            class="buy"
+                        >
+                            Заказать
+                        </button>
+                    </div>
+                    <div class="description-balance">
+                        <div class="balance-details">
+                            <p class="balance-text">Твой баланс:</p>
+                            <p class="balance-amount">3 945 баллов</p>
+                        </div>
+                        <span class="balance-icon">🛍</span>
+                    </div>
+                    <!-- colors -->
+                    <div class="colors">
+                        <h3>Цвета:</h3>
+                        <form>
+                            <div class="colors_radio_btn">
+                                <input
+                                    class="color_input"
+                                    id="radio-1"
+                                    type="radio"
+                                    name="radio"
+                                    value="blue"
+                                    checked
+                                >
+                                <div class="color-block blue"></div>
+                                <label for="radio-1">Синий</label>
+                            </div>
+
+                            <div class="colors_radio_btn">
+                                <input
+                                class="color_input"
+                                id="radio-2"
+                                type="radio"
+                                name="radio"
+                                value="beige"
+                                >
+                                <div class="color-block beige"></div>
+                                <label for="radio-2">Бежевый</label>
+                            </div>
+
+                            <div class="colors_radio_btn">
+                                <input
+                                class="color_input"
+                                id="radio-3"
+                                type="radio"
+                                name="radio"
+                                value="gray"
+                                >
+                                <div class="color-block gray"></div>
+                                <label for="radio-3">Серый</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- size -->
+                    <div class="sizes">
+                        <h3>Размер:</h3>
+                        <form>
+                            <div class="sizes_radio_btn">
+                                <input
+                                class="size_input"
+                                id="radio-4"
+                                type="radio"
+                                name="radio"
+                                value="small"
+                                checked
+                                >
+                                <div class="size-block"></div>
+                                <label for="radio-4">S</label>
+                            </div>
+
+                            <div class="sizes_radio_btn">
+                                <input
+                                class="size_input"
+                                id="radio-5"
+                                type="radio"
+                                name="radio"
+                                value="medium"
+                                >
+                                <div class="size-block"></div>
+                                <label for="radio-5">M</label>
+                            </div>
+
+                            <div class="sizes_radio_btn">
+                                <input
+                                class="size_input"
+                                id="radio-6"
+                                type="radio"
+                                name="radio"
+                                value="large"
+                                >
+                                <div class="size-block"></div>
+                                <label for="radio-6">L</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- details -->
+                    <div class="details">
+                        <h3>Детали:</h3>
+                        <p>Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                    </div>
+                    <!-- how to choose -->
+                    <div class="choose">
+                        <h3>Как выбрать размер:</h3>
+                        <p>Написать дяде Рику для уточнения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

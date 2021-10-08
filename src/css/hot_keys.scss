@@ -1,0 +1,63 @@
+@import '../css/vars.scss';
+@import '../css/mixins.scss';
+
+.hot {
+    width: initial;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    display: flex;
+
+    &__btn {
+        width: 330px;
+        height: 76px;
+        border-radius: 16px;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--green {
+            background: #eff8eb;
+
+            &:hover {
+                background: #e5fadb;
+            }
+        }
+
+        &--yellow {
+            background: #fffae7;
+            margin: 0 24px;
+
+            &:hover {
+                background: #fff5d1;
+            }
+        }
+
+        &--blue {
+            background: #e9f2fb;
+
+            &:hover {
+                background: #d8ebfd;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: $black;
+        margin-left: 16px;
+    }
+
+    &__icon {
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 24px;
+    }
+}

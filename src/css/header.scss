@@ -1,0 +1,98 @@
+@import '../css/vars.scss';
+@import '../css/mixins.scss';
+
+.logo {
+    align-self: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+
+    &__input {
+        width: 308px;
+        height: 44px;
+        background: #f2f2f3;
+        border-radius: $radius;
+        border: 2px transparent solid;
+        position: relative;
+        padding-left: 56px;
+        display: flex;
+        font-size: 18px;
+
+        &::placeholder {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            color: #888b94;
+        }
+
+        &:focus {
+            outline: none;
+            border-radius: $radius;
+            border: 2px solid $blue;
+            background-color: initial;
+        }
+
+        &:active {
+            -webkit-box-shadow: 0 0 10px 2px rgba(42, 129, 221, 0.2);
+            -moz-box-shadow: 0 0 10px 2px rgba(42, 129, 221, 0.2);
+            box-shadow: 0 0 10px 2px rgba(42, 129, 221, 0.2);
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        margin-left: 16px;
+        border: 0;
+        width: 24px;
+        height: 24px;
+        background-color: initial;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.user {
+    display: flex;
+    border: 0;
+    background-color: initial;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover .name {
+        color: $red;
+    }
+
+    &__circle {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-size: cover;
+        margin-right: 16px;
+    }
+
+    &__info {
+        @include flexColumnStart();
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $blue;
+    }
+
+    &__balance {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: $black;
+    }
+}

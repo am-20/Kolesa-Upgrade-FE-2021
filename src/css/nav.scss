@@ -1,0 +1,49 @@
+@import '../css/vars.scss';
+@import '../css/mixins.scss';
+
+.nav {
+    @include flexColumnStart();
+
+    margin-left: 12px;
+    padding: 0;
+    margin-right: 132px;
+
+    &__menu {
+        list-style: none;
+
+        &:active &__line::before {
+            margin-bottom: -12px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 26px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__active {
+        font-weight: bold;
+    }
+
+    &__line {
+        width: 4px;
+        height: 36px;
+        background: $blue;
+        border-radius: 10px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        margin: -6px 8px -6px 0;
+    }
+}

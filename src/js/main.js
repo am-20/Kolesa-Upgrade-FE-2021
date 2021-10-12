@@ -435,6 +435,9 @@ const openModal = (modal) => {
     }
 };
 
+clearCatalog();
+all.forEach(addCard);
+
 tabsBtn.forEach((tab) => {
     tab.addEventListener('click', () => {
         [...tabsBtn].find(btn => btn.classList.contains('tabs__btn--active')).classList.remove('tabs__btn--active');

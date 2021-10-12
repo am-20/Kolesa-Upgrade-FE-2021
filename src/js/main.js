@@ -47,48 +47,61 @@ const clothes = [
 
 const accessories = [
     {
-        id:    6,
-        img:   './src/assets/bottle.png',
-        title: 'Бутылка для воды',
-        price: 100,
-        isNew: true,
+        id:      6,
+        img:     './src/assets/bottle.png',
+        title:   'Бутылка для воды',
+        price:   100,
+        isNew:   true,
+        details: 'Бутылка для воды с трубочкой',
     },
     {
-        id:    7,
-        img:   './src/assets/bottle.png',
-        title: 'Бутылка для воды',
-        price: 100,
-        isNew: false,
+        id:      7,
+        img:     './src/assets/bottle.png',
+        title:   'Бутылка для воды',
+        price:   100,
+        isNew:   false,
+        details: 'Бутылка для воды с трубочкой',
+
     },
     {
-        id:    8,
-        img:   './src/assets/cap.png',
-        title: 'Кепка',
-        price: 150,
-        isNew: true,
+        id:      8,
+        img:     './src/assets/cap.png',
+        title:   'Кепка',
+        price:   150,
+        isNew:   true,
+        details: 'Брендированная кепка',
+
     },
     {
-        id:    9,
-        img:   './src/assets/cap.png',
-        title: 'Кепка',
-        price: 150,
-        isNew: false,
+        id:      9,
+        img:     './src/assets/cap.png',
+        title:   'Кепка',
+        price:   150,
+        isNew:   false,
+        details: 'Брендированная кепка',
+
     },
     {
-        id:    10,
-        img:   './src/assets/coffee_cup.jpg',
-        title: 'Стакан для кофе',
-        price: 50,
-        isNew: true,
+        id:      10,
+        img:     './src/assets/coffee_cup.jpg',
+        title:   'Стакан для кофе',
+        price:   50,
+        isNew:   true,
+        details: 'Стакан для кофе',
+
     },
     {
-        id:    11,
-        img:   './src/assets/coffee_cup.jpg',
-        title: 'Стакан для кофе',
-        price: 50,
-        isNew: false,
+        id:      11,
+        img:     './src/assets/coffee_cup.jpg',
+        title:   'Стакан для кофе',
+        price:   50,
+        isNew:   false,
+        details: 'Стакан для кофе',
+
     },
 ];
+
+const all = clothes.concat(accessories);
 
 const makeCard = (title, img, price, isNew) => `<div class="card">
     <div class="card__image">
@@ -116,74 +129,99 @@ const makeCard = (title, img, price, isNew) => `<div class="card">
 const tabsBtn = document.querySelectorAll('.tabs__btn');
 const catalog = document.querySelector('.js__items');
 
-const newSort = (x, y) => {
-    if (x.isNew === y.isNew) {
-        return 0;
-    }
+// const buyBtn = document.querySelectorAll('.card__btn');
 
-    if (x.isNew) {
-        return -1;
-    }
+const clothesModals = [
+    {
+        id:      't-shirt',
+        title:   clothes[0].title,
+        price:   clothes[0].price,
+        details: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[0].img,
+    },
+    {
+        id:      'sweatshirt',
+        title:   clothes[2].title,
+        price:   clothes[2].price,
+        details: 'Брендированный свитшот от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[2].img,
+    },
+    {
+        id:      'polo',
+        title:   clothes[4].title,
+        price:   clothes[4].price,
+        details: 'Брендированное поло от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[4].img,
+    },
+    {
+        id:      't-shirt_2',
+        title:   clothes[1].title,
+        price:   clothes[1].price,
+        details: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[1].img,
+    },
+    {
+        id:      'sweatshirt_2',
+        title:   clothes[3].title,
+        price:   clothes[3].price,
+        details: 'Брендированный свитшот от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[3].img,
+    },
+    {
+        id:      'polo_2',
+        title:   clothes[5].title,
+        price:   clothes[5].price,
+        details: 'Брендированное поло от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        img:     clothes[5].img,
+    },
+];
 
-    return 1;
-};
+const accessoriesModals = [
+    {
+        id:      'bottle',
+        title:   accessories[0].title,
+        price:   accessories[0].price,
+        details: accessories[0].details,
+        img:     accessories[0].img,
+    },
+    {
+        id:      'cap',
+        title:   accessories[2].title,
+        price:   accessories[2].price,
+        details: accessories[2].details,
+        img:     accessories[2].img,
+    },
+    {
+        id:      'coffee_cup',
+        title:   accessories[4].title,
+        price:   accessories[4].price,
+        details: accessories[4].details,
+        img:     accessories[4].img,
+    },
+    {
+        id:      'bottle_2',
+        title:   accessories[1].title,
+        price:   accessories[1].price,
+        details: accessories[1].details,
+        img:     accessories[1].img,
+    },
+    {
+        id:      'cap_2',
+        title:   accessories[3].title,
+        price:   accessories[3].price,
+        details: accessories[3].details,
+        img:     accessories[3].img,
+    },
+    {
+        id:      'coffee_cup_2',
+        title:   accessories[5].title,
+        price:   accessories[5].price,
+        details: accessories[4].details,
+        img:     accessories[5].img,
+    },
+];
 
-const addCard = (card) => {
-    const {
-        title, img, price, isNew,
-    } = card;
-    const cardHtml = makeCard(title, img, price, isNew);
-
-    catalog.innerHTML += cardHtml;
-};
-
-const addActiveClass = (tab) => {
-    tab.classList.add('tabs__btn--active');
-};
-
-const clearCatalog = () => {
-    while (catalog.lastElementChild) {
-        catalog.removeChild(catalog.lastElementChild);
-    }
-};
-
-tabsBtn.forEach((tab) => {
-    tab.addEventListener('click', () => {
-        tabsBtn.forEach((x) => {
-            if (x.classList.contains('tabs__btn--active')) {
-                x.classList.remove('tabs__btn--active');
-            }
-        });
-
-        if (tab.dataset.key === 'clothes') {
-            addActiveClass(tab);
-
-            clearCatalog();
-
-            clothes.sort(newSort);
-
-            clothes.forEach(addCard);
-        } else if (tab.dataset.key === 'accessories') {
-            addActiveClass(tab);
-
-            clearCatalog();
-
-            accessories.sort(newSort);
-
-            accessories.forEach(addCard);
-        } else if (tab.dataset.key === 'all') {
-            addActiveClass(tab);
-
-            clearCatalog();
-
-            const all = clothes.concat(accessories);
-
-            all.sort(newSort);
-
-            all.forEach(addCard);
-        }
-    });
-});
+const allModals = clothesModals.concat(accessoriesModals);
 
 const makeModal = (title, price, details, img) => `
     <div class="modal__backdrop"></div>
@@ -223,7 +261,7 @@ const makeModal = (title, price, details, img) => `
                 <div class="modal__description">
                     <div class="modal__description-head">
                         <h1 class="modal__title">${title}</h1>
-                        <p class="modal__price">${price}</p>
+                        <p class="modal__price">${price} баллов</p>
                         <button
                             type="button"
                             class="modal__buy"
@@ -345,99 +383,6 @@ const makeModal = (title, price, details, img) => `
         </div>
     </div>`;
 
-const cards = document.querySelectorAll('.card');
-const buyBtn = document.querySelectorAll('.card__btn');
-
-const clothesModals = [
-    {
-        id:      't-shirt',
-        title:   clothes[0].title,
-        price:   clothes[0].price,
-        details: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[0].img,
-    },
-    {
-        id:      't-shirt_2',
-        title:   clothes[1].title,
-        price:   clothes[1].price,
-        details: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[1].img,
-    },
-    {
-        id:      'sweatshirt',
-        title:   clothes[2].title,
-        price:   clothes[2].price,
-        details: 'Брендированный свитшот от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[2].img,
-    },
-    {
-        id:      'sweatshirt_2',
-        title:   clothes[3].title,
-        price:   clothes[3].price,
-        details: 'Брендированный свитшот от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[3].img,
-    },
-    {
-        id:      'polo',
-        title:   clothes[4].title,
-        price:   clothes[4].price,
-        details: 'Брендированное поло от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[4].img,
-    },
-    {
-        id:      'polo_2',
-        title:   clothes[5].title,
-        price:   clothes[5].price,
-        details: 'Брендированное поло от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
-        img:     clothes[5].img,
-    },
-];
-
-const accessoriesModals = [
-    {
-        id:      'bottle',
-        title:   accessories[0].title,
-        price:   accessories[0].price,
-        details: 'Бутылка для воды с трубочкой',
-        img:     accessories[0].img,
-    },
-    {
-        id:      'bottle_2',
-        title:   accessories[1].title,
-        price:   accessories[1].price,
-        details: 'Бутылка для воды с трубочкой',
-        img:     accessories[1].img,
-    },
-    {
-        id:      'cap',
-        title:   accessories[2].title,
-        price:   accessories[2].price,
-        details: 'Кепка',
-        img:     accessories[2].img,
-    },
-    {
-        id:      'cap_2',
-        title:   accessories[3].title,
-        price:   accessories[3].price,
-        details: 'Кепка',
-        img:     accessories[3].img,
-    },
-    {
-        id:      'coffee_cup',
-        title:   accessories[4].title,
-        price:   accessories[4].price,
-        details: 'Стакан для кофе',
-        img:     accessories[4].img,
-    },
-    {
-        id:      'coffee_cup_2',
-        title:   accessories[5].title,
-        price:   accessories[5].price,
-        details: 'Стакан для кофе',
-        img:     accessories[5].img,
-    },
-];
-
 const addModal = (modal) => {
     const {
         title, price, details, img,
@@ -447,14 +392,77 @@ const addModal = (modal) => {
     document.body.innerHTML += modalHtml;
 };
 
-buyBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        clothesModals.forEach(addModal);
-    });
-});
+const newSort = (x, y) => {
+    if (x.isNew === y.isNew) {
+        return 0;
+    }
 
-cards.forEach((card) => {
-    card.addEventListener('click', () => {
-        accessoriesModals.forEach(addModal);
+    if (x.isNew) {
+        return -1;
+    }
+
+    return 1;
+};
+
+const addCard = (card) => {
+    const {
+        title, img, price, isNew,
+    } = card;
+    const cardHtml = makeCard(title, img, price, isNew);
+
+    catalog.innerHTML += cardHtml;
+};
+
+const addActiveClass = (tab) => {
+    tab.classList.add('tabs__btn--active');
+};
+
+const clearCatalog = () => {
+    while (catalog.lastElementChild) {
+        catalog.innerHTML = '';
+    }
+};
+
+clothes.sort(newSort);
+accessories.sort(newSort);
+all.sort(newSort);
+
+const openModal = (modal) => {
+    for (let i = 0; i < catalog.children.length; i += 1) {
+        catalog.children[i].addEventListener('click', () => {
+            addModal(modal[i]);
+        });
+    }
+};
+
+tabsBtn.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        [...tabsBtn].find(btn => btn.classList.contains('tabs__btn--active')).classList.remove('tabs__btn--active');
+
+        if (tab.dataset.key === 'clothes') {
+            addActiveClass(tab);
+
+            clearCatalog();
+
+            clothes.forEach(addCard);
+
+            openModal(clothesModals);
+        } else if (tab.dataset.key === 'accessories') {
+            addActiveClass(tab);
+
+            clearCatalog();
+
+            accessories.forEach(addCard);
+
+            openModal(accessoriesModals);
+        } else if (tab.dataset.key === 'all') {
+            addActiveClass(tab);
+
+            clearCatalog();
+
+            all.forEach(addCard);
+
+            openModal(allModals);
+        }
     });
 });

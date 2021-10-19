@@ -78,6 +78,11 @@
         height: 44px;
         margin: 16px 0;
         border: 0;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     [hidden] {
